@@ -12,6 +12,7 @@ body {
     background-color: #f1f5f9;
     color: #0f172a;
     line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================
@@ -49,6 +50,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 3rem;
 }
 
@@ -81,6 +83,22 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* Theme Toggle Button Style */
+.toggle-btn {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.05);
+}
+
 /* ==========================================
    3. MAIN CONTENT LAYOUT
    ========================================== */
@@ -96,7 +114,7 @@ section {
     margin-bottom: 2.5rem;
     border-radius: 16px;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 section:hover {
@@ -155,6 +173,19 @@ h2::after {
     text-justify: inter-word;
 }
 
+/* Action Button Style (Read More) */
+.action-btn {
+    background: transparent;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
 #skills ul {
     list-style: none;
     display: flex;
@@ -173,6 +204,7 @@ h2::after {
     border: 1px solid #bbf7d0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 #skills ul li:hover {
@@ -182,8 +214,56 @@ h2::after {
     transform: translateY(-2px);
 }
 
+/* Form Styles */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    margin-top: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.submit-btn {
+    background: #38bdf8;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: #0284c7;
+}
+
+.feedback-msg {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 hr {
     display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-size: 0.95rem;
 }
 
 /* ==========================================
@@ -203,4 +283,47 @@ hr {
     section {
         padding: 2rem 1.5rem;
     }
+}
+
+/* ==========================================
+   5. DARK MODE STYLES
+   ========================================== */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+body.dark-mode section {
+    background: #1e293b;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode #about p {
+    color: #cbd5e1;
+}
+
+body.dark-mode #skills ul li {
+    background-color: #1e293b;
+    color: #38bdf8;
+    border-color: #38bdf8;
+}
+
+body.dark-mode #skills ul li:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+body.dark-mode input, 
+body.dark-mode textarea {
+    background-color: #0f172a;
+    color: white;
+    border-color: #475569;
+}
+
+body.dark-mode footer {
+    color: #94a3b8;
 }

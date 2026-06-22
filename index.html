@@ -16,29 +16,26 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">My Skills</a></li>
                 <li><a href="#contact">Contact Me</a></li>
+                <li><button id="theme-toggle" class="toggle-btn">🌙 Dark Mode</button></li>
             </ul>
         </nav>
     </header>
-
-    <hr>
 
     <main>
 
         <section id="about">
             <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Manish Kumar's Profile Picture" width="150">
+            <img src="images/profile.jpg" alt="Manish Kumar's Profile Picture" id="profile-img" width="150">
             <p>
                 Hello! I am Manish Kumar. I am a passionate learner currently exploring the world of web development. 
-                This website is my very first project built entirely using HTML5. I love exploring new technologies, 
-                working on creative ideas, and continuously upgrading my skills.
+                <span id="more-text" style="display: none;">This website is my very first project built entirely using HTML5. I love exploring new technologies, working on creative ideas, and continuously upgrading my skills.</span>
             </p>
+            <button id="read-more-btn" class="action-btn">Read More</button>
         </section>
-
-        <hr>
 
         <section id="skills">
             <h2>My Skills</h2>
-            <p>Here are some of the key skills and technologies I am currently learning and working with:</p>
+            <p>Here are some of the key skills and technologies I am currently learning and working with (Click to interact):</p>
             <ul>
                 <li><strong>HTML5</strong> (Web Page Structure)</li>
                 <li><strong>Core UI Concepts</strong> (Layouts & Navigation)</li>
@@ -47,13 +44,13 @@
             </ul>
         </section>
 
-        <hr>
-
         <section id="contact">
             <h2>Contact Me</h2>
             <p>If you'd like to get in touch, please fill out the form below or reach out via email.</p>
             
-            <form action="#" method="POST">
+            <form id="contact-form" action="#" method="POST">
+                <div id="form-message" class="feedback-msg" style="display: none;"></div>
+
                 <div>
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -66,22 +63,21 @@
                 <br>
                 <div>
                     <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="5" cols="30" placeholder="Type your message here..." required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
                 </div>
                 <br>
                 <div>
-                    <button type="submit">Send Message</button>
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </div>
             </form>
         </section>
 
     </main>
 
-    <hr>
-
     <footer>
         <p>&copy; 2026 Manish Kumar. All Rights Reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
